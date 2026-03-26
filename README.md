@@ -2,11 +2,11 @@
 
 An intelligent command-line tool that analyzes authentication logs and generates comprehensive security incident reports using AI-powered backends (Google Gemini or Ollama).
 
-## 📋 Overview
+## Overview
 
 This tool automates the analysis of authentication logs by parsing security events and leveraging AI to detect threats, identify suspicious patterns, and generate professional incident reports in HTML format. It's designed for security operations center (SOC) analysts to quickly understand and respond to authentication-related security incidents.
 
-## ✨ Features
+## Features
 
 - **Dual AI Backend Support**
   - Google Gemini API (cloud-based, highly capable)
@@ -32,7 +32,7 @@ This tool automates the analysis of authentication logs by parsing security even
   - Actionable recommendations
   - Timestamp and metadata tracking
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -57,7 +57,7 @@ This tool automates the analysis of authentication logs by parsing security even
 
 3. **For Ollama users:** Download and install Ollama from [ollama.ai](https://ollama.ai)
 
-## 📖 Usage
+## Usage
 
 ### Running the Tool
 
@@ -108,7 +108,7 @@ The tool generates:
 - HTML report file named: `soc_report_YYYYMMDD_HHMMSS.html`
 - Automatically opens the report in your default web browser
 
-## 🔧 Configuration
+## Configuration
 
 ### Ollama Configuration
 
@@ -134,7 +134,7 @@ ollama serve
 ollama pull llama3
 ```
 
-## 🎯 Backend-Specific Optimization
+## Backend-Specific Optimization
 
 ### Ollama (Local Models)
 
@@ -153,7 +153,7 @@ ollama pull llama3
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── soc_cli.py           # Main CLI application entry point
@@ -188,7 +188,7 @@ ollama pull llama3
 - Builds data summary for AI analysis
 - Detects patterns and suspicious activities
 
-## 📊 Example Workflow
+## Example Workflow
 
 ```bash
 # 1. Start the tool
@@ -220,7 +220,7 @@ Enter path to auth.log file (e.g. /var/log/auth.log or ./auth.log): ./auth.log
 [*] Opening report in browser...
 ```
 
-## 📋 Report Sections
+## Report Sections
 
 Generated HTML reports include:
 
@@ -241,7 +241,7 @@ Generated HTML reports include:
   - Behavioral anomalies
 - **Recommendations** - Actionable remediation steps
 
-## 🔍 Log Analysis Capabilities
+## Log Analysis Capabilities
 
 The parser automatically detects:
 
@@ -255,7 +255,7 @@ The parser automatically detects:
 | SUDO Usage          | "sudo:" commands with user and command     |
 | CRON Activities     | "CRON" scheduled job entries               |
 
-## ⚠️ Troubleshooting
+## Troubleshooting
 
 ### Ollama Connection Error
 
@@ -320,7 +320,7 @@ ollama pull llama3
 
 **Note:** The Ollama backend uses an optimized prompt that directly generates HTML, which is more reliable than expecting models to follow complex formatting instructions.
 
-## 🛠️ Development
+## Development
 
 ### Adding New AI Backends
 
@@ -340,7 +340,7 @@ To detect new log patterns:
 3. Include in the summary returned by `_build_summary()`
 4. Update the prompt in `backends.py` to highlight the new data
 
-## 📦 Dependencies
+## Dependencies
 
 ```
 google-genai      # Google Gemini API client
@@ -353,15 +353,15 @@ Install with:
 pip install google-genai requests
 ```
 
-## 📄 License
+## License
 
 [Add your license information here]
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit issues and enhancements.
 
-## 📞 Support
+## Support
 
 For issues or questions:
 
@@ -369,7 +369,7 @@ For issues or questions:
 2. Review existing logs in the `logs/` directory
 3. Ensure all prerequisites are installed correctly
 
-## 🎯 Key Design Principles
+## Key Design Principles
 
 - **Modular Architecture** - Easy to extend with new backends or parsers
 - **AI-Powered Analysis** - Leverages cutting-edge AI for intelligent threat detection
